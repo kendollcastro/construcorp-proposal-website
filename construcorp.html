@@ -34,15 +34,35 @@
 
         @media print {
             .no-print {
-                display: none;
+                display: none !important;
             }
 
             body {
                 -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
 
             .page-break {
                 page-break-before: always;
+            }
+
+            /* Prevent breaks inside elements */
+            tr,
+            td,
+            th {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .avoid-break {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            /* Ensure shadows and background colors print */
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
         }
     </style>
@@ -110,7 +130,7 @@
                         </thead>
                         <tbody class="divide-y divide-slate-100">
                             <!-- Phase 1 -->
-                            <tr class="hover:bg-slate-50/50 transition-colors">
+                            <tr class="hover:bg-slate-50/50 transition-colors avoid-break">
                                 <td class="p-5 font-bold text-slate-900 w-1/4 align-top">
                                     Fase 1: Infraestructura Web & CMS
                                     <span class="block text-xs font-normal text-slate-500 mt-1 font-mono">Sprint: 4
@@ -130,7 +150,7 @@
                                 <td class="p-5 font-bold text-slate-900 text-right align-top font-mono">$1,100</td>
                             </tr>
                             <!-- Phase 2 -->
-                            <tr class="hover:bg-red-50/20 transition-colors">
+                            <tr class="hover:bg-red-50/20 transition-colors avoid-break">
                                 <td class="p-5 font-bold text-slate-900 w-1/4 align-top">
                                     Fase 2: Arquitectura E-commerce
                                     <span class="block text-xs font-normal text-slate-500 mt-1 font-mono">Sprint: 3
@@ -150,14 +170,14 @@
                                 <td class="p-5 font-bold text-slate-900 text-right align-top font-mono">$1,650</td>
                             </tr>
                         </tbody>
-                        <tfoot class="bg-slate-900 text-white">
-                            <tr>
-                                <td colspan="2" class="p-4 text-right font-medium uppercase tracking-widest text-xs">
-                                    Total Inversión Desarrollo</td>
-                                <td class="p-4 font-bold text-right text-xl font-mono">$2,750</td>
-                            </tr>
-                        </tfoot>
                     </table>
+                </div>
+
+                <!-- Total Investment (Moved out of table to avoid print duplication) -->
+                <div
+                    class="bg-slate-900 text-white p-4 rounded-b-lg flex justify-between items-center mt-[-1px] relative z-0 avoid-break">
+                    <span class="font-medium uppercase tracking-widest text-xs">Total Inversión Desarrollo</span>
+                    <span class="font-bold text-xl font-mono">$2,750</span>
                 </div>
             </div>
 
@@ -172,7 +192,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Tech Specs -->
-                    <div class="p-6 border border-slate-200 rounded-lg bg-slate-50">
+                    <div class="p-6 border border-slate-200 rounded-lg bg-slate-50 avoid-break">
                         <h3 class="font-bold text-slate-900 mb-4 uppercase text-sm tracking-wider flex items-center">
                             <svg class="w-5 h-5 mr-2 text-red-600" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
@@ -202,7 +222,7 @@
 
                     <!-- Cost Box -->
                     <div
-                        class="p-6 bg-slate-900 text-white rounded-lg flex flex-col justify-center items-center text-center">
+                        class="p-6 bg-slate-900 text-white rounded-lg flex flex-col justify-center items-center text-center avoid-break">
                         <p class="uppercase tracking-widest text-xs font-bold text-slate-400 mb-2">Costo Mensual SLA</p>
                         <span class="text-4xl font-bold font-mono text-white mb-2">$300</span>
                         <p class="text-xs text-slate-400 max-w-xs">Garantiza 99.9% Uptime y respuesta a incidentes en <
@@ -212,7 +232,7 @@
             </div>
 
             <!-- Engineering Focus -->
-            <div class="mb-10 md:mb-12 border-t border-slate-100 pt-10">
+            <div class="mb-10 md:mb-12 border-t border-slate-100 pt-10 avoid-break">
                 <h2 class="text-xl font-bold mb-6 text-slate-900 text-center uppercase tracking-wide text-sm">Estándares
                     de Ingeniería</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-sm">
@@ -235,7 +255,7 @@
             </div>
 
             <!-- Footer Specs -->
-            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 text-xs text-slate-500">
+            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 text-xs text-slate-500 avoid-break">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                         <h4 class="font-bold text-slate-700 mb-3 uppercase font-mono">Condiciones Comerciales</h4>
