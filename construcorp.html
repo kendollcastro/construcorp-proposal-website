@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta Técnica Construcorp | v2.1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Meta Tags & Open Graph -->
+    <meta name="description"
+        content="Propuesta técnica de Arquitectura de Software e Infraestructura para Construcorp. Implementación de Next.js, Supabase y Antigravity UI.">
+    <meta property="og:title" content="Propuesta Técnica Construcorp | v2.1-TECH">
+    <meta property="og:description"
+        content="Infraestructura digital de grado empresarial: Escalabilidad, Seguridad y Rendimiento.">
+    <meta property="og:image" content="./img/construcorp-logo.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Propuesta Técnica Construcorp | v2.1-TECH">
+    <meta name="twitter:description" content="Transformación Digital con Arquitectura Headless y Supabase.">
+    <meta name="twitter:image" content="./img/construcorp-logo.jpg">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        @media print {
+            .no-print {
+                display: none;
+            }
+
+            body {
+                -webkit-print-color-adjust: exact;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 antialiased font-inter">
+
+    <div
+        class="max-w-5xl mx-auto bg-white shadow-2xl my-4 md:my-10 border-t-8 border-slate-800 relative overflow-hidden">
+
+        <div class="p-6 md:p-12 relative z-10">
+            <!-- Header -->
+            <div class="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-12 gap-6">
+                <div>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-none">
+                        CONSTRU<span class="text-red-600">CORP</span></h1>
+                    <p class="text-slate-500 font-medium tracking-wide mt-2 text-base md:text-lg font-mono">Arquitectura
+                        de Software & Infraestructura</p>
+                </div>
+                <div class="text-left md:text-right w-full md:w-auto">
+                    <div
+                        class="bg-slate-50 px-6 py-3 rounded-lg border border-slate-200 inline-block w-full md:w-auto text-left md:text-right">
+                        <p class="font-bold text-slate-700 text-sm uppercase tracking-wider">Especificación Técnica</p>
+                        <p class="text-slate-900 font-bold font-mono text-xl">v2.1-TECH</p>
+                        <p class="text-slate-500 text-xs mt-1">16 de Febrero, 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-slate-100 mb-8 md:mb-10">
+
+            <!-- Objective -->
+            <div class="mb-10 md:mb-12">
+                <h2 class="text-xl md:text-2xl font-bold mb-4 text-slate-900 flex items-center">
+                    <span class="w-2 h-8 bg-red-600 mr-3 rounded-sm"></span>
+                    Objetivo Técnico
+                </h2>
+                <p class="text-slate-700 text-base md:text-lg leading-relaxed max-w-4xl">
+                    Implementar una infraestructura digital de <strong>grado empresarial</strong> para Construcorp,
+                    priorizando la escalabilidad, la integridad de datos y el rendimiento. La solución se basa en una
+                    arquitectura <em>headless</em> desacoplada, utilizando <strong>Antigravity</strong> para una UI
+                    industrial de carga instantánea y <strong>Supabase (PostgreSQL)</strong> para una gestión robusta de
+                    información.
+                </p>
+            </div>
+
+            <!-- Phase 1: Development -->
+            <div class="mb-10 md:mb-12">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-4 md:mb-6 gap-2">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900">I. Cronograma de Implementación & Costos
+                    </h2>
+                    <span
+                        class="bg-slate-800 text-white px-3 py-1 text-xs font-bold rounded uppercase tracking-wider font-mono">Development
+                        Loop</span>
+                </div>
+
+                <div class="border border-slate-200 rounded-lg overflow-hidden shadow-sm overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[700px]">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-600 uppercase text-xs tracking-wider font-semibold">
+                                <th class="p-4 border-b border-slate-200">Fase</th>
+                                <th class="p-4 border-b border-slate-200">Especificaciones Técnicas</th>
+                                <th class="p-4 border-b border-slate-200 text-right">Inversión</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <!-- Phase 1 -->
+                            <tr class="hover:bg-slate-50/50 transition-colors">
+                                <td class="p-5 font-bold text-slate-900 w-1/4 align-top">
+                                    Fase 1: Infraestructura Web & CMS
+                                    <span class="block text-xs font-normal text-slate-500 mt-1 font-mono">Sprint: 4
+                                        Semanas</span>
+                                </td>
+                                <td class="p-5 text-slate-600 text-sm leading-relaxed align-top">
+                                    <ul class="list-disc list-outside ml-4 space-y-2">
+                                        <li><strong>Frontend Industrial:</strong> Implementación de <span
+                                                class="text-slate-900 font-semibold">Antigravity DS</span> sobre Next.js
+                                            14 para una UI robusta y minimalista.</li>
+                                        <li><strong>SSR & SEO Técnico:</strong> Renderizado por servidor para indexación
+                                            inmediata y <em>Core Web Vitals</em> en verde.</li>
+                                        <li><strong>Supabase CMS:</strong> Módulo de gestión de proyectos a medida con
+                                            base de datos relacional para control de obras.</li>
+                                    </ul>
+                                </td>
+                                <td class="p-5 font-bold text-slate-900 text-right align-top font-mono">$1,100</td>
+                            </tr>
+                            <!-- Phase 2 -->
+                            <tr class="hover:bg-red-50/20 transition-colors">
+                                <td class="p-5 font-bold text-slate-900 w-1/4 align-top">
+                                    Fase 2: Arquitectura E-commerce
+                                    <span class="block text-xs font-normal text-slate-500 mt-1 font-mono">Sprint: 3
+                                        Semanas</span>
+                                </td>
+                                <td class="p-5 text-slate-600 text-sm leading-relaxed align-top">
+                                    <ul class="list-disc list-outside ml-4 space-y-2">
+                                        <li><strong>API Payment Gateway:</strong> Integración profunda con <span
+                                                class="text-slate-900 font-semibold">Tilopay CR</span> mediante webhooks
+                                            para confirmación de pagos en tiempo real.</li>
+                                        <li><strong>Inventario Relacional:</strong> Esquema SQL en Supabase para manejo
+                                            de stock con integridad referencial.</li>
+                                        <li><strong>Seguridad Bancaria:</strong> Encriptación SSL/TLS y cumplimiento de
+                                            normativas PCI-DSS en el checkout.</li>
+                                    </ul>
+                                </td>
+                                <td class="p-5 font-bold text-slate-900 text-right align-top font-mono">$1,650</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="bg-slate-900 text-white">
+                            <tr>
+                                <td colspan="2" class="p-4 text-right font-medium uppercase tracking-widest text-xs">
+                                    Total Inversión Desarrollo</td>
+                                <td class="p-4 font-bold text-right text-xl font-mono">$2,750</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- SLA Section -->
+            <div class="mb-10 md:mb-12 page-break">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-4 md:mb-6 gap-2">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900">II. SLA de Soporte y Optimización</h2>
+                    <span
+                        class="bg-red-100 text-red-900 px-3 py-1 text-xs font-bold rounded uppercase tracking-wider font-mono">Infraestructura
+                        Crítica</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Tech Specs -->
+                    <div class="p-6 border border-slate-200 rounded-lg bg-slate-50">
+                        <h3 class="font-bold text-slate-900 mb-4 uppercase text-sm tracking-wider flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-red-600" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                                </path>
+                            </svg>
+                            Mantenimiento Preventivo
+                        </h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✔</span>
+                                <div><strong>Hosting Premium:</strong> Despliegue en Vercel Edge Network / Supabase Pro.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✔</span>
+                                <div><strong>Security Patches:</strong> Actualización mensual de dependencias y
+                                    auditoría de vulnerabilidades.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✔</span>
+                                <div><strong>CI/CD Pipelines:</strong> Mantenimiento de los flujos de integración
+                                    continua.</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Cost Box -->
+                    <div
+                        class="p-6 bg-slate-900 text-white rounded-lg flex flex-col justify-center items-center text-center">
+                        <p class="uppercase tracking-widest text-xs font-bold text-slate-400 mb-2">Costo Mensual SLA</p>
+                        <span class="text-4xl font-bold font-mono text-white mb-2">$300</span>
+                        <p class="text-xs text-slate-400 max-w-xs">Garantiza 99.9% Uptime y respuesta a incidentes en <
+                                4 horas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engineering Focus -->
+            <div class="mb-10 md:mb-12 border-t border-slate-100 pt-10">
+                <h2 class="text-xl font-bold mb-6 text-slate-900 text-center uppercase tracking-wide text-sm">Estándares
+                    de Ingeniería</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-sm">
+                    <div>
+                        <div class="font-bold text-slate-900 mb-2 font-mono text-base">ANTIGRAVITY UI</div>
+                        <p class="text-slate-500 px-2">Sistema de diseño atómico para consistencia visual y reducción de
+                            deuda técnica.</p>
+                    </div>
+                    <div>
+                        <div class="font-bold text-slate-900 mb-2 font-mono text-base">POSTGRESQL (SQL)</div>
+                        <p class="text-slate-500 px-2">Modelo de datos estricto para garantizar la integridad
+                            transaccional del negocio.</p>
+                    </div>
+                    <div>
+                        <div class="font-bold text-slate-900 mb-2 font-mono text-base">SCALABLE ARCH</div>
+                        <p class="text-slate-500 px-2">Codebase modular preparado para evolucionar a ERP o CRM futuro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Specs -->
+            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 text-xs text-slate-500">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-slate-700 mb-3 uppercase font-mono">Condiciones Comerciales</h4>
+                        <ul class="space-y-1 font-mono">
+                            <li>> 50% Anticipo a la firma (Inicio de Sprint).</li>
+                            <li>> 25% Deploy a Producción Fase 1.</li>
+                            <li>> 25% Finalización QA Fase 2.</li>
+                        </ul>
+                        <div class="mt-4 p-3 bg-red-50 border border-red-100 rounded text-red-800">
+                            <p class="font-bold uppercase text-[10px] tracking-wider mb-1">Nota Importante:</p>
+                            <p class="leading-snug">Los costos de Dominios, Hosting (Vercel/Supabase) y licencias de
+                                terceros son responsabilidad directa del cliente y se facturan por separado.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-700 mb-3 uppercase font-mono">Tech Stack</h4>
+                        <p class="font-mono">
+                            Runtime: Node.js 20+<br>
+                            Framework: Next.js 14 (App Router)<br>
+                            Database: Supabase (PostgreSQL)<br>
+                            Payments: Tilopay REST API
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center no-print flex flex-col items-center">
+                <button onclick="window.print()"
+                    class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-8 rounded shadow-lg transform transition hover:-translate-y-0.5 w-full md:w-auto font-mono text-sm">
+                    > EXPORT_TO_PDF
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
